@@ -1,0 +1,26 @@
+ALGORITHM produit scalaire
+VAR
+    x1,x2,y1,y2,ps:real;
+    i,n:integer;
+    function dot_product(x1,y1,x2,y2:real):real;
+begin
+	 dot_product:=(x1*y1)+(x2*y2);
+	end;
+BEGIN
+writeln('donner le nombre des couples');
+	readln(n);
+	for i:=1 to n do 
+	begin
+		writeln('le couple ',i);
+		writeln('donner x de v1');
+	readln(x1);
+			writeln('donner y de v1');
+	readln(y1);
+			writeln('donner x de v2');
+	readln(x2);
+			writeln('donner y de v2');
+	readln(y2);
+	writeln(dot_product(x1,y1,x2,y2):4:2);
+    if  ((dot_product(x1,y1,x2,y2))=0 )then  writeln('vecteur orthonorme')
+        else writeln('vecteur non orthonorme');
+END
